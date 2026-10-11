@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#071426">
+  <meta name="description" content="Kavin Mani's digital profile card and developer links.">
+
+  <title>Kavin Mani | Digital Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="page-header">
+      <p class="eyebrow">DIGITAL IDENTITY</p>
+      <h1>My Digital Card<span>.</span></h1>
+      <p class="subtitle">One identity. Every connection.</p>
+    </header>
+
+    <div class="card-scene" id="cardScene"
+         aria-label="Interactive digital business card">
+
+      <div class="card" id="card">
+
+        <!-- FRONT SIDE -->
+        <section class="card-face card-front">
+
+          <div class="top-row">
+            <span class="brand">VKM<span>.</span></span>
+            <span class="chip">DEVELOPER CARD</span>
+          </div>
+
+          <div class="profile-section">
+            <div class="photo-ring">
+              <img
+                src="./Kavin.jpg"
+                alt="Kavin Mani profile photo"
+                class="profile-photo"
+              >
+            </div>
+
+            <div class="identity">
+              <p class="small-label">HELLO, I'M</p>
+              <h2>Kavin Mani</h2>
+              <p class="role">Junior Web Developer</p>
+              <p class="degree">B.Sc Computer Science</p>
+            </div>
+          </div>
+
+          <div class="divider-line"></div>
+          
+            <a
+                href="./portfolio/Index01.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="portfolio-link"
+                >
+            
+                <span>VISIT MY PORTFOLIO</span>
+            </a>
+
+
+          <div class="front-bottom">
+            <div>
+              <p class="small-label">MY PHILOSOPHY</p>
+              <p class="motto">CODE. LEARN. BUILD.</p>
+            </div>
+          </div>
+
+          <span class="corner corner-one"></span>
+          <span class="corner corner-two"></span>
+        </section>
+
+        <!-- BACK SIDE -->
+        <section class="card-face card-back">
+
+          <div class="top-row">
+            <span class="brand">LET'S CONNECT<span>.</span></span>
+            <span class="chip">KM · 2026</span>
+          </div>
+
+          <p class="back-description">
+            Explore my work and connect with me.
+          </p>
+
+          <div class="links">
+
+            <a
+              href="https://www.linkedin.com/in/kavinmani0707/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link-item"
+              aria-label="Visit LinkedIn profile"
+            >
+              <span class="link-icon">in</span>
+              <span class="link-text">
+                <strong>LinkedIn</strong>
+                <small>Professional profile</small>
+              </span>
+              <span class="arrow">↗</span>
+            </a>
+
+            <a
+              href="https://github.com/kavinmani08"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link-item"
+              aria-label="Visit GitHub profile"
+            >
+              <span class="link-icon github-icon">GH</span>
+              <span class="link-text">
+                <strong>GitHub</strong>
+                <small>Projects &amp; repositories</small>
+              </span>
+              <span class="arrow">↗</span>
+            </a>
+
+            <a
+              href="mailto:kavinmani0707@gmail.com"
+              class="link-item"
+              aria-label="Send an email"
+            >
+              <span class="link-icon">@</span>
+              <span class="link-text">
+                <strong>Email</strong>
+                <small>Let's talk</small>
+              </span>
+              <span class="arrow">↗</span>
+            </a>
+
+          </div>
+
+          <div class="back-footer">
+            <span>DESIGNED WITH PURPOSE</span>
+            <span>KM © 2026</span>
+          </div>
+
+        </section>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="flip-button"
+      id="flipButton"
+      aria-controls="card"
+      aria-pressed="false"
+    >
+      <span aria-hidden="true">↻</span>
+      <span class="button-label">Flip Digital Card</span>
+    </button>
+
+    <p class="hint" id="hint" aria-live="polite">
+      Tap anywhere on the card to reveal the other side.
+    </p>
+
+    <footer class="page-footer">
+      <span>VKM SOFTECH</span>
+      <span>BUILT WITH PURPOSE</span>
+    </footer>
+
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

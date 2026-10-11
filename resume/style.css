@@ -1,0 +1,458 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #101d36;
+    --blue: #18345a;
+    --gold: #d5ad55;
+    --text: #273449;
+    --muted: #667085;
+    --light: #f4f6fa;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #e8ecf3;
+    color: var(--text);
+    line-height: 1.65;
+    padding: 35px 15px;
+    font-size: 14px;
+}
+
+/* RESUME PAGE */
+.page {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    background: var(--white);
+    box-shadow: 0 20px 60px rgba(16, 29, 54, 0.14);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: pageEnter 0.8s ease both;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(120deg, #101d36, #234773);
+    color: var(--white);
+    padding: 38px 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    border-bottom: 4px solid var(--gold);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--gold);
+    font-size: 27px;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.header h1 {
+    font-size: 34px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gold);
+    margin-top: 7px;
+}
+
+.tagline {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #dce5f2;
+}
+
+/* PDF BUTTON */
+.print-btn {
+    padding: 12px 17px;
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.print-btn:hover {
+    background: #f0cf82;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(213, 173, 85, 0.25);
+}
+
+/* CONTACT BAR */
+.contact {
+    padding: 20px 42px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    background: #f5f7fb;
+    border-bottom: 1px solid #e4e8ef;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+/* MAIN LAYOUT */
+.content {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+}
+
+.main-content {
+    padding: 35px 35px 25px 42px;
+}
+
+.sidebar {
+    background: #f8f9fc;
+    border-left: 1px solid #e7ebf2;
+    padding: 35px 30px 25px;
+}
+
+/* SECTIONS */
+.section {
+    margin-bottom: 30px;
+    break-inside: avoid;
+}
+
+.section h3 {
+    color: var(--navy);
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.gold-line {
+    height: 3px;
+    width: 55px;
+    background: var(--gold);
+    margin: 10px 0 18px;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.section:hover .gold-line {
+    width: 90px;
+}
+
+.section p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* SKILLS */
+.skill {
+    margin-bottom: 16px;
+}
+
+.skill h4,
+.project h4,
+.education h4 {
+    font-size: 14px;
+    color: var(--blue);
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.skill p {
+    color: var(--muted);
+}
+
+/* PROJECTS */
+.project {
+    margin-bottom: 23px;
+    padding-left: 15px;
+    border-left: 2px solid var(--gold);
+    break-inside: avoid;
+}
+
+.project-type {
+    color: var(--muted);
+    font-size: 12px !important;
+    font-weight: 600;
+}
+
+.project ul {
+    padding-left: 18px;
+    margin-top: 8px;
+}
+
+.project li {
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+/* EDUCATION */
+.education {
+    margin-bottom: 24px;
+    break-inside: avoid;
+}
+
+.year {
+    display: inline-block;
+    font-size: 12px;
+    color: #8b681d;
+    background: #fff0cb;
+    padding: 4px 9px;
+    border-radius: 4px;
+    margin-bottom: 9px;
+    font-weight: 800;
+}
+
+.education p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.muted {
+    font-style: italic;
+}
+
+/* STRENGTHS */
+.strengths {
+    padding-left: 18px;
+}
+
+.strengths li {
+    padding: 4px 0;
+    font-size: 13px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--navy);
+    color: #dbe4f2;
+    border-top: 3px solid var(--gold);
+    padding: 16px 42px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* ENTRANCE ANIMATION */
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 700px) {
+    body {
+        padding: 12px 8px;
+    }
+
+    .header {
+        padding: 28px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .avatar {
+        width: 65px;
+        height: 65px;
+        min-width: 65px;
+        font-size: 20px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .header h2 {
+        font-size: 16px;
+    }
+
+    .print-btn {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 20px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content,
+    .sidebar {
+        padding: 25px 22px;
+    }
+
+    .sidebar {
+        border-left: none;
+        border-top: 1px solid #e7ebf2;
+    }
+
+    footer {
+        padding: 16px 20px;
+        flex-wrap: wrap;
+    }
+}
+
+/* PRINT / SAVE AS PDF */
+@page {
+    size: A4;
+    margin: 8mm;
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+        font-size: 11px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .page {
+        max-width: none;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        animation: none;
+    }
+
+    .header {
+        padding: 22px 28px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .avatar {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+    }
+
+    .contact {
+        padding: 13px 28px;
+        gap: 8px 15px;
+    }
+
+    .content {
+        grid-template-columns: 1.7fr 1fr;
+    }
+
+    .main-content {
+        padding: 22px 22px 15px 28px;
+    }
+
+    .sidebar {
+        padding: 22px 20px 15px;
+    }
+
+    .section {
+        margin-bottom: 20px;
+    }
+
+    .print-btn {
+        display: none;
+    }
+
+    .project,
+    .education,
+    .section {
+        break-inside: avoid;
+    }
+
+    footer {
+        padding: 12px 28px;
+    }
+}
+
+/* DOWNLOAD RESUME BUTTON */
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 24px;
+    background: #d5ad55;
+    color: #101d36;
+
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    border: 2px solid #d5ad55;
+    border-radius: 8px;
+
+    box-shadow: 0 5px 18px rgba(213, 173, 85, 0.25);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.download-btn span {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.download-btn:hover {
+    background: #101d36;
+    color: #d5ad55;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(16, 29, 54, 0.25);
+}
+
+.download-btn:active {
+    transform: scale(0.97);
+}
+
+/* MOBILE STYLE */
+@media (max-width: 700px) {
+    .download-btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 15px;
+    }
+}
